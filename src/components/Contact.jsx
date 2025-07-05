@@ -32,36 +32,34 @@ const Contact = () => {
     setLoading(true);
 
     emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+  .send(
+    "service_6sx9oml",        // Service ID
+    "template_dr4lhko",       // Template ID
+    {
+      name: form.name,        // Sesuai dengan {{name}} di template
+      email: form.email,      // Sesuai dengan {{email}} di template
+      message: form.message,  // Sesuai dengan {{message}} di template
+    },
+    import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY // Public Key dari EmailJS kamu
+  )
+  .then(
+    () => {
+      setLoading(false);
+      alert("Thank you. Your message has been sent!");
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    },
+    (error) => {
+      setLoading(false);
+      console.error(error);
+      alert("Oops, something went wrong. Please try again.");
+    }
+  );
 
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
   };
 
   return (
