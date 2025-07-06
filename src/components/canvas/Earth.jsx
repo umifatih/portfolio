@@ -22,8 +22,8 @@ const Earth = () => {
   console.log("Earth Model:", earth);
 
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
-  );
+    <primitive object={earth.scene} scale={1.5} position-y={0} rotation-y={0} />
+  )
 };
 
 const EarthCanvas = () => {
