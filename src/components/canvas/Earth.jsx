@@ -1,10 +1,9 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
 import CanvasLoader from "../Loader";
 
-// Cek dukungan WebGL
+// ✅ Cek support WebGL
 function isWebGLAvailable() {
   try {
     const canvas = document.createElement("canvas");
@@ -20,35 +19,25 @@ function isWebGLAvailable() {
 const Earth = () => {
   const earth = useGLTF("/portfolio/planet/scene.gltf");
   console.log("Earth Model:", earth);
-
   return (
     <primitive object={earth.scene} scale={1.5} position-y={0} rotation-y={0} />
-  )
+  );
 };
 
 const EarthCanvas = () => {
-  const [webglSupported, setWebglSupported] = useState(true);
-
-  useEffect(() => {
-    setWebglSupported(isWebGLAvailable());
-  }, []);
-
-  if (!webglSupported) {
-    return (
-      <div style={{ color: "#fff", textAlign: "center", padding: "2rem" }}>
-        Your device does not support 3D WebGL content.
-      </div>
-    );
+  if (!isWebGLAvailable()) {
+    return <div style={{ color: "#fff", textAlign: "center" }}>🌐 WebGL not supported on this device.</div>;
   }
 
   return (
     <Canvas
-      frameloop="demand"
       shadows={false}
-      dpr={[1, 1]} // lebih ringan di HP
+      frameloop="demand"
+      dpr={[1]}
       gl={{
         preserveDrawingBuffer: false,
         powerPreference: "low-power",
+        antialias: false,
       }}
       camera={{
         fov: 45,
@@ -59,13 +48,12 @@ const EarthCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          enableZoom={false}
           autoRotate={false}
+          enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
         <Earth />
-
         <Preload all />
       </Suspense>
     </Canvas>
