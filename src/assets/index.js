@@ -11,6 +11,15 @@ import goclean from "./goclean.png";
 import happycookies from "./happycookies.png";
 import analisis from "./analisis.png";
 import coindetector from "./coindetector.png";
+import simprofetika from "./simprofetika.png";
+import sipakrt from "./sipakrt.png";
+import sistemakademik from "./sistemakademik.png";
+import voiceclone from "./voiceclone.png";
+import tts from "./tts.png";
+import presensi from "./presensi.png";
+import sipades from "./sipades.png";
+import websekolah from "./websekolah.png";
+import omni from "./omni.png";
 
 // Tech Logos
 import css from "./tech/css.png";
@@ -51,6 +60,15 @@ export {
   meta,
   dobites,
   coindetector,
+  simprofetika,
+  sipakrt,
+  sistemakademik,
+  voiceclone,
+  tts,
+  presensi,
+  sipades,
+  websekolah,
+  omni,
   geomath,
   goclean,
   happycookies,
