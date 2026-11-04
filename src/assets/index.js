@@ -20,6 +20,9 @@ import presensi from "./presensi.png";
 import sipades from "./sipades.png";
 import websekolah from "./websekolah.png";
 import omni from "./omni.png";
+import igSaintekFeed from "./ig-saintek-feed.jpg";
+import igSaintekReels from "./ig-saintek-reels.jpg";
+import igUinsaizuReels from "./ig-uinsaizu-reels.jpg";
 
 // Tech Logos
 import css from "./tech/css.png";
@@ -69,6 +72,9 @@ export {
   sipades,
   websekolah,
   omni,
+  igSaintekFeed,
+  igSaintekReels,
+  igUinsaizuReels,
   geomath,
   goclean,
   happycookies,

@@ -39,6 +39,9 @@ import {
   sipades,
   websekolah,
   omni,
+  igSaintekFeed,
+  igSaintekReels,
+  igUinsaizuReels,
 } from "../assets";
 
 export const navLinks = [
@@ -90,8 +93,8 @@ const technologies = [
   { name: "Flutter", icon: flutter },         // Mobile dev (opsional jika kamu masukkan)
   { name: "Dart", icon: dart },               // Flutter pairing
 ];
-const experiences = [
-  // WORK EXPERIENCE
+// WORK EXPERIENCE
+const workExperiences = [
   {
     title: "Affiliate & Content Team Coordinator (Intern)",
     company_name: "Nusantara Natural",
@@ -105,16 +108,6 @@ const experiences = [
     ],
   },
   {
-    title: "Content Creator (PPL Intern)",
-    company_name: "Kemenag – PPL Group 2",
-    icon: creator,
-    iconBg: "#FBCFE8",
-    date: "2026",
-    points: [
-      "Created weekly Instagram recap content (Weekly Recap carousels) for the group's account @pplkemenagbms26.",
-    ],
-  },
-  {
     title: "Social Media Content Creator (Intern)",
     company_name: "UIN Saizu Purwokerto",
     icon: creator,
@@ -122,6 +115,9 @@ const experiences = [
     date: "May 2026 – August 2026",
     points: [
       "Created content for the Instagram accounts @saintekuinsaizu and @uinsaizu_official, from shooting and video editing to content calendar planning.",
+      "Planned content calendars for the Faculty of Science and Technology's study programs and campus events.",
+      "Designed feed posts, announcements, and greeting posters using Canva.",
+      "Shot and edited short-form videos (Reels), such as faculty facility tours and campus event coverage.",
     ],
   },
   {
@@ -132,6 +128,8 @@ const experiences = [
     date: "January 2026 – February 2026",
     points: [
       "Developed WordPress-based websites as a WordPress Developer intern.",
+      "Customized themes and page layouts to match design and client requirements.",
+      "Managed website content, plugins, and basic site configuration.",
     ],
   },
   {
@@ -141,8 +139,9 @@ const experiences = [
     iconBg: "#FDE68A",
     date: "November 2025 – February 2026",
     points: [
-      "Hosted live streaming sessions and interacted directly with the audience.",
-      "Presented products communicatively to attract viewer interest.",
+      "Hosted interactive live broadcasts to promote products and maintain strong audience engagement.",
+      "Improved improvisation and verbal communication skills through real-time interactions.",
+      "Collaborated with sellers to prepare scripts and adjust content strategies based on audience targets.",
     ],
   },
   {
@@ -153,23 +152,10 @@ const experiences = [
     date: "August 2025 – November 2025",
     points: [
       "Served customers and processed payments for PlayStation rental transactions as a cashier.",
-      "Handled customer questions and complaints as customer service.",
       "Operated PlayStation units and managed customers' play sessions to keep service running smoothly.",
-    ],
-  },
-  {
-    title: "Customer Service, Live Host, and Admin",
-    company_name: "BAW Company",
-    icon: creator,
-    iconBg: "#FDE68A",
-    date: "August 2024 – May 2025",
-    points: [
-      "Hosted interactive live broadcasts to promote products and maintain strong audience engagement.",
-      "Improved improvisation and verbal communication skills through real-time interactions.",
-      "Collaborated with sellers to prepare scripts and adjust content strategies based on audience targets.",
       "Handled customer complaints and ensured a positive user experience throughout the session.",
       "Managed order records and daily sales transactions as a cashier.",
-      "Maintained product availability and organized administrative tasks related to inventory and reporting."
+      "Maintained product availability and organized administrative tasks related to inventory and reporting.",
     ],
   },
   {
@@ -184,50 +170,10 @@ const experiences = [
       "Worked under strict deadlines in a team to ensure timely and error-free data submission."
     ],
   },
+];
 
-  // PROJECT EXPERIENCE
-  {
-    title: "Full-Stack, API & AI Projects",
-    company_name: "UIN Saizu Purwokerto",
-    icon: web,
-    iconBg: "#BBF7D0",
-    date: "2025 – Present",
-    points: [
-      "Built SIMPROFETIKA, a live training-management system (Laravel, Tailwind CSS) with online registration, SPPD and certificate printing, and QR code attendance.",
-      "Developed SIPAKRT, a full-stack neighborhood administration dashboard with Next.js 15, Prisma ORM, and PostgreSQL (Neon), deployed on Vercel.",
-      "Developed the central hub of a distributed academic system made of 7 services (Python, Flask, REST API) and coordinated API contracts across teams.",
-      "Built the Omni-Marketplace & AI Trend Analyzer dashboard (Streamlit, Playwright, Gemini) for Shopee and Tokopedia trend analysis.",
-      "Built voice cloning (FastAPI, OpenVoice v2, MMS-TTS) and text-to-speech (Coqui XTTS-v2, FastSpeech2) projects.",
-    ],
-  },
-  {
-    title: "KKN Village Digitalization Projects",
-    company_name: "KKN Desa Mandirajakulon, Banjarnegara",
-    icon: web,
-    iconBg: "#C7F9CC",
-    date: "2026",
-    points: [
-      "Built a digital document archiving system (SIPADES) for the village hall using Laravel and MySQL, with AI-assisted OCR extraction.",
-      "Built a school website with an admin CMS for SD N 3 Mandiraja Kulon using Laravel Blade, Tailwind CSS, and Alpine.js.",
-      "Built a QR code-based attendance system hosted on GitHub Pages with a Google Apps Script/Sheets backend.",
-    ],
-  },
-  {
-    title: "Web & Mobile Development Projects",
-    company_name: "UIN Saizu Purwokerto",
-    icon: web,
-    iconBg: "#BBF7D0",
-    date: "2023 – 2025",
-    points: [
-      "Developed an online laundry service website with PHP, HTML, CSS, JS, MySQL, and Figma.",
-      "Created a simple arithmetic web app using Python and Flask.",
-      "Built a cookies sales website using HTML, PHP, MySQL, and Figma.",
-      "Developed a mobile application for cookie sales using Flutter and Firebase.",
-      "Built a personal portfolio website using React.js and Tailwind CSS."
-    ],
-  },
-
-  // ORGANIZATIONAL EXPERIENCE
+// ORGANIZATIONAL EXPERIENCE
+const organizationExperiences = [
   {
     title: "Group Secretary, KKN Angkatan 58",
     company_name: "UIN Saizu Purwokerto – Desa Mandirajakulon",
@@ -274,9 +220,52 @@ const experiences = [
       "Actively communicated with sponsors regarding branding needs and follow-ups.",
       "Successfully secured funding and facility support for event sustainability."
     ],
-  }
+  },
 ];
 
+// PROJECT EXPERIENCE (not shown in the Experience section; the Projects section covers these)
+const projectExperiences = [
+  {
+    title: "Full-Stack, API & AI Projects",
+    company_name: "UIN Saizu Purwokerto",
+    icon: web,
+    iconBg: "#BBF7D0",
+    date: "2025 – Present",
+    points: [
+      "Built SIMPROFETIKA, a live training-management system (Laravel, Tailwind CSS) with online registration, SPPD and certificate printing, and QR code attendance.",
+      "Developed SIPAKRT, a full-stack neighborhood administration dashboard with Next.js 15, Prisma ORM, and PostgreSQL (Neon), deployed on Vercel.",
+      "Developed the central hub of a distributed academic system made of 7 services (Python, Flask, REST API) and coordinated API contracts across teams.",
+      "Built the Omni-Marketplace & AI Trend Analyzer dashboard (Streamlit, Playwright, Gemini) for Shopee and Tokopedia trend analysis.",
+      "Built voice cloning (FastAPI, OpenVoice v2, MMS-TTS) and text-to-speech (Coqui XTTS-v2, FastSpeech2) projects.",
+    ],
+  },
+  {
+    title: "KKN Village Digitalization Projects",
+    company_name: "KKN Desa Mandirajakulon, Banjarnegara",
+    icon: web,
+    iconBg: "#C7F9CC",
+    date: "2026",
+    points: [
+      "Built a digital document archiving system (SIPADES) for the village hall using Laravel and MySQL, with AI-assisted OCR extraction.",
+      "Built a school website with an admin CMS for SD N 3 Mandiraja Kulon using Laravel Blade, Tailwind CSS, and Alpine.js.",
+      "Built a QR code-based attendance system hosted on GitHub Pages with a Google Apps Script/Sheets backend.",
+    ],
+  },
+  {
+    title: "Web & Mobile Development Projects",
+    company_name: "UIN Saizu Purwokerto",
+    icon: web,
+    iconBg: "#BBF7D0",
+    date: "2023 – 2025",
+    points: [
+      "Developed an online laundry service website with PHP, HTML, CSS, JS, MySQL, and Figma.",
+      "Created a simple arithmetic web app using Python and Flask.",
+      "Built a cookies sales website using HTML, PHP, MySQL, and Figma.",
+      "Developed a mobile application for cookie sales using Flutter and Firebase.",
+      "Built a personal portfolio website using React.js and Tailwind CSS."
+    ],
+  },
+];
 
 const projects = [
   {
@@ -463,7 +452,50 @@ const projects = [
     image: geomath,
     source_code_link: "https://github.com/umifatih/geomath",
   },
+  {
+    name: "Saintek UIN Saizu – Instagram Feed",
+    description:
+      "Feed posts for the Faculty of Science and Technology's Instagram (@saintekuinsaizu): announcements, greetings, and event posters designed in Canva.",
+    tags: [
+      { name: "canva", color: "blue-text-gradient" },
+      { name: "instagram", color: "green-text-gradient" },
+      { name: "design", color: "pink-text-gradient" },
+    ],
+    image: igSaintekFeed,
+    source_code_link: "https://www.instagram.com/saintekuinsaizu/",
+  },
+  {
+    name: "Saintek UIN Saizu – Reels",
+    description:
+      "Short-form videos for @saintekuinsaizu, such as faculty facility tours and campus highlights, from shooting to video editing.",
+    tags: [
+      { name: "reels", color: "blue-text-gradient" },
+      { name: "video-editing", color: "green-text-gradient" },
+      { name: "instagram", color: "pink-text-gradient" },
+    ],
+    image: igSaintekReels,
+    source_code_link: "https://www.instagram.com/saintekuinsaizu/",
+  },
+  {
+    name: "UIN Saizu Official – Reels",
+    description:
+      "Campus life and event Reels for UIN Saizu's official Instagram (@uinsaizu_official), with some videos reaching tens of thousands of views.",
+    tags: [
+      { name: "reels", color: "blue-text-gradient" },
+      { name: "content-creation", color: "green-text-gradient" },
+      { name: "instagram", color: "pink-text-gradient" },
+    ],
+    image: igUinsaizuReels,
+    source_code_link: "https://www.instagram.com/uinsaizu_official/",
+  },
 ];
 
 
-export { services, technologies, experiences, projects };
+export {
+  services,
+  technologies,
+  workExperiences,
+  organizationExperiences,
+  projectExperiences,
+  projects,
+};

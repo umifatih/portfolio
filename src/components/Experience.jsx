@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
-import { experiences } from "../constants";
+import { workExperiences, organizationExperiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
@@ -69,10 +69,27 @@ const Experience = () => {
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
+        <h3 className={`${styles.sectionHeadText} text-center !text-[30px] sm:!text-[40px]`}>
+          Work Experience
+        </h3>
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {workExperiences.map((experience, index) => (
             <ExperienceCard
-              key={`experience-${index}`}
+              key={`work-experience-${index}`}
+              experience={experience}
+            />
+          ))}
+        </VerticalTimeline>
+      </div>
+
+      <div className='mt-32 flex flex-col'>
+        <h3 className={`${styles.sectionHeadText} text-center !text-[30px] sm:!text-[40px]`}>
+          Organization Experience
+        </h3>
+        <VerticalTimeline>
+          {organizationExperiences.map((experience, index) => (
+            <ExperienceCard
+              key={`organization-experience-${index}`}
               experience={experience}
             />
           ))}
